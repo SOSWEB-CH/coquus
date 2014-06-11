@@ -1,0 +1,310 @@
+/*   
+Theme Name: Travelogue
+Theme URI: http://www.podq.com/travelogue-2/
+Version: 2.7
+Description: A fun, travelogueish theme. Don't forget to change the random pictures in the polaroid! Widget-compatible.
+Author: Joshua Lyman
+Author URI: http://www.podq.com/
+Tags: two-columns, brown, flexible-width
+*/
+
+/*
+Released under the GPL. The images were shot by me, Joshua Lyman. You can certainly keep them there (although
+I recommend you change them) so long as you don't take credit for them. ;-)
+
+Note that the sidebars can be modified through the use of widgets in the admin panel. Have fun!
+*/
+
+/* Color Schemes
+   -------------
+	Orange Dark: 	#AA3511
+	Darkest Brown: 	#45392A
+	Dark Brown: 	#847563
+	Brown: 			#CFC2A1
+	Light Brown:	#E9E2DA
+	Red: 			#AC0605
+	Blue:			#315980       */
+
+
+@import url('css-niftyCorners.css');
+@import url('css-typography.css');
+@import url('css-calendar.css');
+
+/* Layout Declarations */
+
+body {
+	background-image: url(images/background.jpg);
+	background-repeat: repeat-x;
+	background-color: #FFFFFF; 
+	margin: 0;
+	padding: 0;
+}
+
+a img, a:hover img {
+	border:none;
+	text-decoration:none;
+}
+
+.gallery .gallery-item .gallery-icon img {
+	padding: 0%;
+	border: 1px solid #847563;
+	text-decoration:none;
+}
+
+#headerElements {
+	position:relative;
+	width:100%;
+}
+
+#polaroid {
+	left:0px;
+	top:0px;
+	width:304px;
+	height:297px;
+	background: url('images/polaroid.jpg') no-repeat;
+}
+
+	#polaroidimage {
+		position:relative;
+		left:44px;
+		top:31px;
+		width:202px;
+		height:187px;
+		overflow:hidden;
+	}
+	
+	#polaroidcaption{
+		position:relative;
+		left:42px;
+		top:40px;
+		width:202px;
+		height:26px;
+		overflow:hidden;
+	}
+
+#header-img {
+	position:absolute;
+	left:304px;
+	top:0px;
+	min-width:663px;
+        width:663px;
+	height:184px;
+	background: url('images/header_img.jpg') no-repeat;
+}
+
+#subheader {
+	position:absolute;
+	left:304px;
+	top:184px;
+	width:60%;
+	height:101px;
+	margin: 3px 5px 0 35px;
+}
+	
+		#subheader #search {
+			float: left;
+			width: 45%;
+		}
+		
+		#subheader #cats {
+			float: right;
+			width: 45%;
+		}
+
+#mainContainer {
+	background-image: url('images/sidebarbg.jpg');
+	background-repeat: repeat-y;
+}
+
+#sidebar {
+	float:left;
+	width:304px;
+	margin: 0 0 5px 0;
+	padding-left: 10px;
+}
+
+#content {
+	right:0;
+	padding:0;
+	z-index:0;
+	font-size: 96%;
+	margin-left:315px;
+	margin-right:20px;
+	height:1%; /* This is a silly hack needed to give IE hasLayout a true value, otherwise the sidebar goes crazy. */
+}
+
+#rightcolumn {
+	float:right;
+	width: 125px;
+	margin:0 0 10px 20px;
+	padding:3px;
+}
+	
+	#rightcolumn .mini_sidebar_widget_cont { margin-bottom:10px; background-color: white; }
+	#rightcolumn .mini_title { font-weight: bold; }
+	
+	#rightcolumn ul { margin: 0; }
+	#rightcolumn li { list-style-type:none; margin-left:-25px; }
+	#rightcolumn > li {margin-left:-18px; }
+
+	#rightcolumn .mini_sidebar_widget_cont,
+	#rightcolumn #rss_feeds,
+	#rightcolumn #rc_extra_code { padding:3px; }
+	#rightcolumn #rss_feeds_cont,
+	#rightcolumn #rc_extra_code_cont { margin-bottom: 5px; }
+	
+.navigation {
+	height:20px;
+	font-weight:bold;
+}
+
+#footer {
+	border: 1px solid #D4DBD3;
+	height:100%;
+	margin:10px 20px 0 305px;
+	clear:both;
+}
+
+.post {
+	border-bottom: 1px #E0D3CD dotted;
+	padding: 7px 3px 1px 4px;
+	margin-bottom: 10px;
+}
+
+div.comments ol {
+	margin-left:0;
+	padding:0;
+}
+
+	.commentlist li {
+		border: 1px solid #45392A;
+		background-color:#e5ebf2;
+		background-image: url(images/comment-bg-alt.jpg);
+		background-repeat: repeat-x;
+		padding:7px;
+		margin-bottom:12px;
+		list-style-type:none;
+	}
+	
+	.commentlist .alt {
+		background-color:#f9f5f0;
+		background-image: url(images/comment-bg.jpg);
+		background-repeat: repeat-x;
+	}
+	
+	.commentmetadata {
+		float: right;
+		text-align:right;
+		font-size:smaller;
+		width:60%;
+	}
+
+/* Postit Date */
+
+.post .post_cal {
+	text-align: center;
+	width: 54px;
+	float: left;
+	margin: 0 10px 5px 0;
+}
+
+	.post_cal .dayname {
+		background-color: #AC0605;
+		background-image:url(images/cal_bg1.jpg);
+		background-repeat:repeat-x;
+		background-position: bottom center;
+		border-bottom: 1px solid #A6A6A6;
+		color: #FFFFFF;
+		font-size: smaller;
+		font-weight: bolder;
+		width: 96%;
+	}
+	
+	.post_cal .daynum {
+		background-color:#F0E9D7;
+		border-bottom: 1px solid #A6A6A6;
+		background-image:url(images/cal_bg2.jpg);
+		background-repeat:repeat-x;
+		font-size: xx-large;
+		font-weight: bold;
+		width: 96%;
+	}
+	
+	.post_cal .month, .post_cal .year {
+		background-color: #AC0605;
+		background-image:url(images/cal_bg3.jpg);
+		background-repeat:repeat-x;
+		font-size: smaller;
+		color:white;
+		width: 96%;
+	}
+	
+.postmetadata {
+	font-weight: bold;
+}
+
+/* End Postit Date */
+
+/* Sidebar Boxes */
+
+.boxhead_cont, .boxbody_cont { width: 230px; }
+
+.boxhead_cont { margin-top:15px; }
+
+.boxhead { width:228px; background-color:#CFC2A1; background-image:url(images/boxhead_bg.jpg); background-repeat:repeat-x; }
+
+.boxbody { width:228px; background-color: #D3C5A8; background-image:url(images/boxbody_bg.jpg); background-repeat:repeat-x; }
+
+.boxhead h3 {
+	color: #315980;
+	margin:0;
+	padding:0 0 0 10px;
+}
+
+/* End Sidebar Boxes */
+
+.gravatar_image {
+	float:left;
+	margin: 0 10px 5px 0;
+}
+
+/* WordPress 2.5 Image Gallery Classes */
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption-dd {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+
+img#wpstats{display:none;} /* Remove the silly wp-stats smiley if the plugin is installed. */

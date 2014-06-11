@@ -1,0 +1,10 @@
+# BEGIN AnyFont
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^images/(.*)\.png$ /wordpress/wp-content/plugins/anyfont/img.php [L]
+</IfModule>
+
+# END AnyFont
+

@@ -1,0 +1,116 @@
+/* Travelogue - Typography CSS Control */
+
+body {
+	font-family: "Century Gothic", Verdana, Arial, Helvetica, sans-serif;
+}
+
+p {
+	font-size: .8em;
+}
+
+a:link {
+	color: #AC0605;
+	text-decoration: underline;
+	/*border-bottom: 1px dashed #E0D3CD;*/
+}
+
+a:visited {
+	color: #315980;
+	text-decoration: underline;
+	/*border-bottom: 1px dashed #E0D3CD;*/
+}
+
+a:hover {
+	color: #AA3511;
+	text-decoration:underline;
+	/*border-bottom: 1px #E0D3CD solid;*/
+}
+
+#polaroidcaption p {
+	font-size:x-small;
+	margin:0;
+	padding:0;
+	font-style:italic;
+	text-align:center;
+}
+
+#header-img h1, #header-img a, .tagline {
+	font-size: 1.6em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	line-height: 1.2em;
+	letter-spacing: 0;
+	text-align: center;
+	word-spacing: normal;
+	text-decoration: none;
+	border: none;
+	color: #E9E2DA;
+	margin-top:60px;
+}
+
+.tagline {
+	margin-top: 10px;
+	font-size:smaller;
+}
+
+#rightcolumn {
+	font-size:smaller;
+}
+
+#footer {
+	text-align: center;
+	font-size:.7em;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+	color: #AC0605;
+}
+
+.post_head {
+	margin-top: -24px; /* Reign the post title back into position. */
+	padding-bottom: 1px; /* This clears out the post content from bumping up too high */
+}
+
+.post_head h2, .post_head .postmetadata {
+	padding: 5px 0 0 5px;
+}
+
+.pagetitle {
+	text-align:center;
+	border-bottom: 2px solid #CFC2A1;
+	width:100%;
+	margin:0 0 15px;
+}
+
+.entry li {
+	font-size: smaller;
+}
+
+blockquote {
+	background-image:url(images/blockquote-bg.gif);
+	background-repeat:repeat-y;
+	padding-left: 15px;
+	font-style:italic;
+}
+
+/* Sidebar Styles */
+
+#sidebar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 0 5px 10px;
+	font-size: smaller;
+}
+
+#sidebar ul li h3 {
+	font-size: 1.35em;
+}
+
+#sidebar ul li ul li {
+	list-style-type: square;
+}
+
+/* End Sidebar Styles */
+
+/* End Typography Declarations */
